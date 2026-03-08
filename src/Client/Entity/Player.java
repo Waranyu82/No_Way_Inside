@@ -76,8 +76,8 @@ public class Player extends Entity {
     public void setDefaultValues() {
         worldX = gp.tileSize * 14;
         worldY = gp.tileSize * 9;
-        running = 8;
-        Speed = 4;
+        running = 4;
+        Speed = 1;
         direction = "down";
         stamina = maxStamina;
         exhausted = false;

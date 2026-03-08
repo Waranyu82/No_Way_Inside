@@ -26,7 +26,7 @@ public class ghost extends Entity {
 
         name = "Ghost";
         if (!gp.DEBUG) {
-            Speed = 5;
+            Speed = 2;
         } else {
             Speed = 0;
         }

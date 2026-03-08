@@ -126,8 +126,6 @@ public class assetSetter {
                 { 12, 14 },
                 { 13, 13 },
                 { 12, 13 },
-                { 13, 12 },
-                { 12, 12 },
         };
         spawnBarriers(barrierPositions, 3);
 

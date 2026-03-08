@@ -1,11 +1,13 @@
 3
-765
-970
+755
+832
 600
-3
+5
 Book
-Axe
 Blood key
+Blood key
+Blood key
+Axe
 false
 false
 false

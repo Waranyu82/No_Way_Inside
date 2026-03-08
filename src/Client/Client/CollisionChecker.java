@@ -13,41 +13,34 @@ public class CollisionChecker {
 
     // ─── Tile Collision ─────
     public void checkTile(Entity entity) {
+        // บีบ Hitbox เล็กน้อยเพื่อแก้กำแพงอากาศและลดการเดินติดมุมกำแพง
         int left = entity.worldX + entity.solidArea.x + 2;
         int right = entity.worldX + entity.solidArea.x + entity.solidArea.width - 3;
         int top = entity.worldY + entity.solidArea.y + 2;
         int bottom = entity.worldY + entity.solidArea.y + entity.solidArea.height - 3;
 
-        int sp = entity.Speed;
+        int sp = entity.Speed; // ใช้พยากรณ์จุดที่กำลังจะเดินไปถึง
 
         switch (entity.direction) {
             case "up":
                 checkTwoCols(entity,
-                        (left) / gp.tileSize,
-                        (right) / gp.tileSize,
-                        (top - sp) / gp.tileSize,
-                        (top - sp) / gp.tileSize);
+                        left / gp.tileSize, right / gp.tileSize,
+                        (top - sp) / gp.tileSize, (top - sp) / gp.tileSize);
                 break;
             case "down":
                 checkTwoCols(entity,
-                        (left) / gp.tileSize,
-                        (right) / gp.tileSize,
-                        (bottom) / gp.tileSize,
-                        (bottom) / gp.tileSize);
+                        left / gp.tileSize, right / gp.tileSize,
+                        (bottom + sp) / gp.tileSize, (bottom + sp) / gp.tileSize);
                 break;
             case "left":
                 checkTwoCols(entity,
-                        (left - sp) / gp.tileSize,
-                        (left - sp) / gp.tileSize,
-                        (top) / gp.tileSize,
-                        (bottom) / gp.tileSize);
+                        (left - sp) / gp.tileSize, (left - sp) / gp.tileSize,
+                        top / gp.tileSize, bottom / gp.tileSize);
                 break;
             case "right":
                 checkTwoCols(entity,
-                        (right + sp) / gp.tileSize,
-                        (right + sp) / gp.tileSize,
-                        (top) / gp.tileSize,
-                        (bottom) / gp.tileSize);
+                        (right + sp) / gp.tileSize, (right + sp) / gp.tileSize,
+                        top / gp.tileSize, bottom / gp.tileSize);
                 break;
         }
     }

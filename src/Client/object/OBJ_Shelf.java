@@ -18,7 +18,7 @@ public class OBJ_Shelf extends Entity {
         isBarrier = true;
         drawHeight = 2 * gp.tileSize;
         drawWidth = gp.tileSize;
-        solidArea = new Rectangle(0, 0, drawWidth, drawHeight - 15);
+        solidArea = new Rectangle(0, 0, drawWidth, drawHeight);
         if (gp.language) {
             dialogues[0] = "คุณค้นชั้นวาง... ไม่พบอะไรเป็นประโยชน์";
             dialogues[1] = "มีแต่ฝุ่นและกองหนังสือเก่าๆ";

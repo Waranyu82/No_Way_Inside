@@ -9,7 +9,7 @@ public class ghost2 extends ghost {
 
         name = "Ghost2";
         if (!gp.DEBUG) {
-            Speed = 5;
+            Speed = 2;
         } else {
             Speed = 0;
         }
