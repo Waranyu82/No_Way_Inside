@@ -20,11 +20,7 @@ public class OBJ_WoodBarrier extends Entity {
     }
 
     public void setDialogue() {
-        if (gp.language) {
-            dialogues[0] = "ไม้กั้นนี้แน่นมาก... ต้องใช้ขวานทำลาย";
-        } else {
-            dialogues[0] = "This wooden barrier is very sturdy... you need an axe to break it.";
-        }
+        dialogues[0] = "ไม้กั้นนี้แน่นมาก... ต้องใช้ขวานทำลาย";
     }
 
     @Override

@@ -11,20 +11,12 @@ public class OBJ_Blood_Key extends Entity {
         down1 = setup("/Client/res/object/blood_key");
         collision = true;
         description = "";
-        if (gp.language) {
-            description = "[" + name + "]\nกุญแจปริศนา";
-        } else {
-            description = "[" + name + "]\nMysterious key.";
-        }
+        description = "[" + name + "]\nกุญแจปริศนา";
         setDialogue();
     }
 
     public void setDialogue() {
-        if (gp.language) {
-            dialogues[0] = "ใช้กับประตู";
-        } else {
-            dialogues[0] = "Used on a door.";
-        }
+        dialogues[0] = "ใช้กับประตู";
 
     }
 

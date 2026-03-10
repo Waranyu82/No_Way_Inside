@@ -209,11 +209,8 @@ public class UI {
                 g2.setFont(g2.getFont().deriveFont(Font.BOLD, 22F));
                 g2.setColor(new Color(255, 80, 80));
                 String msg = "";
-                if (gp.language) {
-                    msg = "ในห้องมืดเกินไป ฉันไม่กล้าเข้าไป";
-                } else {
-                    msg = "It’s too dark in the room. I don’t dare go in.";
-                }
+
+                msg = "ในห้องมืดเกินไป ฉันไม่กล้าเข้าไป";
 
                 int tx = gp.ScreenWidth / 2 - (int) g2.getFontMetrics().getStringBounds(msg, g2).getWidth() / 2;
                 g2.drawString(msg, tx, boxY + boxH / 2 + 8);
@@ -222,11 +219,7 @@ public class UI {
                 g2.setFont(g2.getFont().deriveFont(Font.BOLD, 22F));
                 g2.setColor(Color.WHITE);
                 String msg = "";
-                if (gp.language) {
-                    msg = "ต้องมีไฟ : " + gp.currentLightSize + " / 500";
-                } else {
-                    msg = "There needs to be a light :" + gp.currentLightSize + " / 500";
-                }
+                msg = "ต้องมีไฟ : " + gp.currentLightSize + " / 500";
                 int tx = gp.ScreenWidth / 2 - (int) g2.getFontMetrics().getStringBounds(msg, g2).getWidth() / 2;
                 g2.drawString(msg, tx, boxY + boxH / 2 + 8);
             }
@@ -244,11 +237,7 @@ public class UI {
                 g2.setFont(g2.getFont().deriveFont(Font.BOLD, 22F));
                 g2.setColor(new Color(255, 80, 80));
                 String msg = "";
-                if (gp.language) {
-                    msg = "ต้องมีกุญแจก่อน!";
-                } else {
-                    msg = "You need a key first.";
-                }
+                msg = "ต้องมีกุญแจก่อน!";
                 int tx = gp.ScreenWidth / 2 - (int) g2.getFontMetrics().getStringBounds(msg, g2).getWidth() / 2;
                 g2.drawString(msg, tx, boxY + boxH / 2 + 8);
             } else {
@@ -256,11 +245,7 @@ public class UI {
                 g2.setFont(g2.getFont().deriveFont(Font.BOLD, 22F));
                 g2.setColor(Color.WHITE);
                 String prompt = "";
-                if (gp.language) {
-                    prompt = "[E] ใช้กุญแจเปิดประตู";
-                } else {
-                    prompt = "[E] Use the key to open the door.";
-                }
+                prompt = "[E] ใช้กุญแจเปิดประตู";
                 int tx = gp.ScreenWidth / 2 - (int) g2.getFontMetrics().getStringBounds(prompt, g2).getWidth() / 2;
                 g2.drawString(prompt, tx, boxY + boxH / 2 + 8);
             }
@@ -287,11 +272,7 @@ public class UI {
             g2.setFont(g2.getFont().deriveFont(Font.BOLD, 22F));
             g2.setColor(shelf.searched ? Color.GRAY : Color.WHITE);
             String prompt = "";
-            if (gp.language) {
-                prompt = shelf.searched ? "ค้นหาแล้ว (ไม่มีอะไร)" : "[E] ค้นหาชั้นวางของ";
-            } else {
-                prompt = shelf.searched ? "Searched (nothing found)" : "[E] Search the shelf";
-            }
+            prompt = shelf.searched ? "ค้นหาแล้ว (ไม่มีอะไร)" : "[E] ค้นหาชั้นวางของ";
             int tx = gp.ScreenWidth / 2 - (int) g2.getFontMetrics().getStringBounds(prompt, g2).getWidth() / 2;
             g2.drawString(prompt, tx, boxY + boxH / 2 + 8);
             return;
@@ -314,11 +295,7 @@ public class UI {
             }
             g2.setColor(hasAxe ? Color.WHITE : new Color(255, 80, 80));
             String prompt = "";
-            if (gp.language) {
-                prompt = hasAxe ? "[E] ใช้ Axe ทำลายไม้กั้น" : "[E] ต้องใช้ Axe ก่อน!";
-            } else {
-                prompt = hasAxe ? "[E] Use the Axe to break the wooden barrier" : "[E] You need the Axe first!";
-            }
+            prompt = hasAxe ? "[E] ใช้ Axe ทำลายไม้กั้น" : "[E] ต้องใช้ Axe ก่อน!";
             int tx = gp.ScreenWidth / 2 - (int) g2.getFontMetrics().getStringBounds(prompt, g2).getWidth() / 2;
             g2.drawString(prompt, tx, boxY + boxH / 2 + 8);
             return;
@@ -339,11 +316,7 @@ public class UI {
         g2.setFont(g2.getFont().deriveFont(Font.BOLD, 22F));
         g2.setColor(Color.WHITE);
         String prompt = "";
-        if (gp.language) {
-            prompt = "[E] เปิดกล่อง  " + current + " / " + required;
-        } else {
-            prompt = "[E] Open chest  " + current + " / " + required;
-        }
+        prompt = "[E] เปิดกล่อง  " + current + " / " + required;
         int textX = boxX + 20;
         int textY = boxY + boxH / 2 + 8;
         g2.drawString(prompt, textX, textY);
@@ -419,17 +392,6 @@ public class UI {
         if (commandNum == 2) {
             g2.drawString(">", x - gp.tileSize, y);
         }
-
-        g2.setFont(g2.getFont().deriveFont(Font.BOLD, 22F));
-        if (gp.language) {
-            text = "language : ไทย";
-        } else {
-            text = "language : Eng";
-        }
-
-        x = getXforcenterText(text);
-        y += gp.tileSize;
-        g2.drawString(text, x, y);
 
     }
 
@@ -608,12 +570,6 @@ public class UI {
                 gp.keyH.enterPressed = false;
             }
         }
-        textY += gp.tileSize;
-        if (gp.language) {
-            g2.drawString("1 >> ไทย", textX, textY);
-        } else {
-            g2.drawString("1 >> English", textX, textY);
-        }
 
         // END GAME BACK TO TITLE
         textY += (gp.tileSize * 2) - 28;
@@ -733,11 +689,7 @@ public class UI {
             g2.setFont(g2.getFont().deriveFont(Font.BOLD, 36F));
             g2.setColor(Color.WHITE);
             String line3 = "";
-            if (gp.language) {
-                line3 = "มีไฟอยู่รอบๆ เก็บเพื่อเพิ่มแสงสว่าง";
-            } else {
-                line3 = "There are lights around. Collect them to increase brightness.";
-            }
+            line3 = "มีไฟอยู่รอบๆ เก็บเพื่อเพิ่มแสงสว่าง";
             int x3 = getXforcenterText(line3);
             int cy = gp.ScreenHeight / 2 - 30;
             g2.drawString(line3, x3, cy + 55);
@@ -829,13 +781,8 @@ public class UI {
         g2.setColor(new Color(200, 200, 200));
 
         String sub1, sub2;
-        if (gp.language) {
-            sub1 = "คุณรอดจากบ้านหลังนั้นได้";
-            sub2 = "แต่ฝันร้ายยังคงอยู่...";
-        } else {
-            sub1 = "You escaped from the haunted house.";
-            sub2 = "But the nightmare never truly ends...";
-        }
+        sub1 = "คุณรอดจากบ้านหลังนั้นได้";
+        sub2 = "แต่ฝันร้ายยังคงอยู่...";
 
         int subX1 = getXforcenterText(sub1);
         int subX2 = getXforcenterText(sub2);
@@ -849,11 +796,7 @@ public class UI {
         g2.setFont(g2.getFont().deriveFont(Font.PLAIN, 22F));
         g2.setColor(new Color(180, 160, 90));
         String lightText;
-        if (gp.language) {
-            lightText = "แสงสว่างที่รวบรวมได้: " + gp.currentLightSize;
-        } else {
-            lightText = "Light collected: " + gp.currentLightSize;
-        }
+        lightText = "แสงสว่างที่รวบรวมได้: " + gp.currentLightSize;
         int lx = getXforcenterText(lightText);
         g2.drawString(lightText, lx, gp.ScreenHeight / 2 + 110);
 
@@ -864,11 +807,7 @@ public class UI {
             g2.setFont(g2.getFont().deriveFont(Font.BOLD, 26F));
             g2.setColor(new Color(220, 220, 255));
             String back;
-            if (gp.language) {
-                back = "[ ENTER ]  กลับหน้าหลัก";
-            } else {
-                back = "[ ENTER ]  Back to Title";
-            }
+            back = "[ ENTER ]  กลับหน้าหลัก";
             int bx = getXforcenterText(back);
             g2.drawString(back, bx, gp.ScreenHeight - 50);
         }

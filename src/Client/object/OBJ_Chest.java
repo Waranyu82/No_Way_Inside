@@ -15,10 +15,7 @@ public class OBJ_Chest extends Entity {
         drawWidth = gp.tileSize - 15;
         solidArea = new Rectangle(0, 0, drawWidth, drawHeight);
         description = "";
-        if (gp.language) {
-            description = "[" + name + "]\nกล่องที่เต็มไปด้วยสมบัติ!";
-        } else {
-            description = "[" + name + "]\nA chest filled with treasures.";
-        }
+        description = "[" + name + "]\nกล่องที่เต็มไปด้วยสมบัติ!";
+
     }
 }

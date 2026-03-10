@@ -19,24 +19,16 @@ public class OBJ_Shelf extends Entity {
         drawHeight = 2 * gp.tileSize;
         drawWidth = gp.tileSize;
         solidArea = new Rectangle(0, 0, drawWidth, drawHeight);
-        if (gp.language) {
-            dialogues[0] = "คุณค้นชั้นวาง... ไม่พบอะไรเป็นประโยชน์";
-            dialogues[1] = "มีแต่ฝุ่นและกองหนังสือเก่าๆ";
-            dialogues[2] = "คุณพบบางอย่างซ่อนอยู่ด้านหลัง!";
-        } else {
-            dialogues[0] = "You searched the shelf... nothing useful was found.";
-            dialogues[1] = "There’s only dust and piles of old books.";
-            dialogues[2] = "You found something hidden behind it!";
-        }
+
+        dialogues[0] = "คุณค้นชั้นวาง... ไม่พบอะไรเป็นประโยชน์";
+        dialogues[1] = "มีแต่ฝุ่นและกองหนังสือเก่าๆ";
+        dialogues[2] = "คุณพบบางอย่างซ่อนอยู่ด้านหลัง!";
     }
 
     public void searched() {
         if (searched) {
-            if (gp.language) {
-                gp.ui.currentDialogue = "คุณได้ค้นที่นี่แล้ว...";
-            } else {
-                gp.ui.currentDialogue = "You have already searched here....";
-            }
+            gp.ui.currentDialogue = "คุณได้ค้นที่นี่แล้ว...";
+
         } else {
             searched = true;
             int roll = new java.util.Random().nextInt(10);

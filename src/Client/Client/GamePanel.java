@@ -100,9 +100,6 @@ public class GamePanel extends JPanel implements Runnable {
     private long lastScreamTime = 0;
     private final long ScreamCooldown = 2250;
 
-    // ภาษา
-    public boolean language = false;
-
     public GamePanel() {
         this.setPreferredSize(new DimensionUIResource(ScreenWidth, ScreenHeight));
         this.setBackground(Color.black);

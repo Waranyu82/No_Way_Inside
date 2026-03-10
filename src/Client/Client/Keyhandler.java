@@ -78,13 +78,6 @@ public class Keyhandler implements KeyListener {
 
     // TITLE STATE
     public void titleState(int code) {
-        if (code == KeyEvent.VK_1) {
-            if (!gp.language) {
-                gp.language = true;
-            } else {
-                gp.language = false;
-            }
-        }
 
         if (code == KeyEvent.VK_UP || code == KeyEvent.VK_W) {
             gp.ui.commandNum--;
@@ -112,7 +105,6 @@ public class Keyhandler implements KeyListener {
                 gp.currentLightSize = 200;
                 gp.player.setDefaultValues();
                 gp.player.inventory.clear();
-                gp.player.inventory.add(new Client.object.OBJ_Book(gp));
                 // reset สถานะ object ทั้งหมด
                 gp.assetteR = new assetSetter(gp);
                 // โหลด map ใหม่
@@ -243,13 +235,6 @@ public class Keyhandler implements KeyListener {
 
     // OPTIONS
     public void optionState(int code) {
-        if (code == KeyEvent.VK_1) {
-            if (!gp.language) {
-                gp.language = true;
-            } else {
-                gp.language = false;
-            }
-        }
 
         if (code == KeyEvent.VK_ESCAPE) {
             gp.gameState = gp.playState;

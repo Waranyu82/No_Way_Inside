@@ -1,13 +1,10 @@
 3
-755
-832
+810
+1023
 600
-5
-Book
-Blood key
-Blood key
-Blood key
+2
 Axe
+Book
 false
 false
 false

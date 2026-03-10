@@ -11,11 +11,7 @@ public class OBJ_Axe extends Entity {
         down1 = setup("/Client/res/object/axe");
         collision = true;
         description = "";
-        if (gp.language) {
-            description = "[" + name + "]\nใช้สำหรับกำจัดสิ่งกีดขวาง";
-        } else {
-            description = "[" + name + "]\nUsed to remove obstacles.";
-        }
+        description = "[" + name + "]\nใช้สำหรับกำจัดสิ่งกีดขวาง";
     }
 
     public void setDialogue() {

@@ -122,15 +122,13 @@ public class assetSetter {
         gp.ghost[1].worldY = gp.tileSize * 11;
 
         int[][] barrierPositions = {
-                { 13, 14 },
-                { 12, 14 },
                 { 13, 13 },
                 { 12, 13 },
         };
         spawnBarriers(barrierPositions, 3);
 
         gp.obj[13] = new OBJ_Book(gp);
-        gp.obj[13].worldX = gp.tileSize;
+        gp.obj[13].worldX = 32 * gp.tileSize;
         gp.obj[13].worldY = 8 * gp.tileSize;
 
         // ───── ทางออก (วางไว้ฝั่งตรงข้ามจาก barriers) ─────

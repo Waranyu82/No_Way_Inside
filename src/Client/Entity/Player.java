@@ -76,8 +76,8 @@ public class Player extends Entity {
     public void setDefaultValues() {
         worldX = gp.tileSize * 14;
         worldY = gp.tileSize * 9;
-        running = 4;
-        Speed = 1;
+        running = 5;
+        Speed = 3;
         direction = "down";
         stamina = maxStamina;
         exhausted = false;
@@ -381,11 +381,7 @@ public class Player extends Entity {
                 break;
 
             default:
-                if (gp.language) {
-                    gp.ui.currentDialogue = "[" + itemName + "] ยังไม่สามารถใช้ได้ตอนนี้";
-                } else {
-                    gp.ui.currentDialogue = "[" + itemName + "] Cannot be used right now.";
-                }
+                gp.ui.currentDialogue = "[" + itemName + "] ยังไม่สามารถใช้ได้ตอนนี้";
                 gp.gameState = gp.dialogueState;
                 break;
         }

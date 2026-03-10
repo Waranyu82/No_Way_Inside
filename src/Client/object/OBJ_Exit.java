@@ -22,11 +22,7 @@ public class OBJ_Exit extends Entity {
         drawHeight = gp.tileSize;
         drawWidth = 2 * gp.tileSize;
         solidArea = new Rectangle(drawWidth, drawHeight);
-        if (gp.language) {
-            description = "ทางออก... ในที่สุดก็เจอแล้ว";
-        } else {
-            description = "The exit... you finally found it.";
-        }
+        description = "ทางออก... ในที่สุดก็เจอแล้ว";
     }
 
 }
